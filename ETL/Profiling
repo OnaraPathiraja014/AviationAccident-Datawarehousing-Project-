@@ -1,0 +1,2006 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{F935E80E-CBA0-4B56-BD0C-A6237D11565E}" Name="DESKTOP-5NJSVCG.AviationAccident_Staging">
+      <DtsConnectionManagerID>DESKTOP-5NJSVCG.AviationAccident_Staging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{689D21A0-97FB-492F-AA2F-5A927A3DE840}" Name="DESKTOP-5NJSVCG.AviationAccident_Staging 1">
+      <DtsConnectionManagerID>DESKTOP-5NJSVCG.AviationAccident_Staging 1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{9B839CB2-A899-48F5-A4BE-501169DFBD0C}" Name="Profiling">
+      <DtsConnectionManagerID>Profiling</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgAccidentLocation" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgAccidentLocation" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgAccidentLocation" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgAccidentLocation" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgAccidentLocation" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq1">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgAircraft" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq1">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgAircraft" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq1">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgAircraft" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq1">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgAircraft" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq1">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgAircraft" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq2">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgEvent" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq2">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgEvent" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq2">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgEvent" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq2">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgEvent" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq2">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgEvent" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq3">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgInjuries" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq3">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgInjuries" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq3">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgInjuries" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq3">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgInjuries" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq3">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table Schema="dbo" Table="StgInjuries" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgEvent" RowCount="789087" />
+        <Column Name="EventId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgEvent" RowCount="789087" />
+        <Column Name="EventDate" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgEvent" RowCount="789087" />
+        <Column Name="BroadPhaseOfFlight" SqlDbType="VarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>410599</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgEvent" RowCount="789087" />
+        <Column Name="InvestigationType" SqlDbType="VarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgEvent" RowCount="789087" />
+        <Column Name="AccidentNumber" SqlDbType="VarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq2" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgEvent" RowCount="789087" />
+        <Column Name="WeatherCondition" SqlDbType="VarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>64143</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq2">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgEvent" RowCount="789087" />
+        <Column Name="EventId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>7100</MinValue>
+        <MaxValue>54380</MaxValue>
+        <Mean>30368.2666930262</Mean>
+        <StdDev>13494.9808303912</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq2">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgEvent" RowCount="789087" />
+        <Column Name="EventDate" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>1996-07-05T00:00:00.0000000</MinValue>
+        <MaxValue>2022-12-08T00:00:00.0000000</MaxValue>
+      </ColumnStatisticsProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq2">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgEvent" RowCount="789087" />
+        <Column Name="EventId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>47281</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq2">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgEvent" RowCount="789087" />
+        <Column Name="EventDate" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>9152</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="AccidentNumber" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="TotalFatalInjuries" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>11212</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="TotalSeriousInjuries" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>12255</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="TotalMinorInjuries" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>11676</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="TotalUninjured" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>5741</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="InjurySeverity" SqlDbType="VarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>883</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="Aircraftdamage" SqlDbType="VarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>2107</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq3" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="AircraftRegNo" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>47281</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq3">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="AccidentNumber" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>4001</MinValue>
+        <MaxValue>51281</MaxValue>
+        <Mean>27641</Mean>
+        <StdDev>13648.8490357246</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq3">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="TotalFatalInjuries" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>349</MaxValue>
+        <Mean>0.863594776678034</Mean>
+        <StdDev>7.07581219355685</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq3">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="TotalSeriousInjuries" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>161</MaxValue>
+        <Mean>0.358191058071147</Mean>
+        <StdDev>1.99678648205998</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq3">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="TotalMinorInjuries" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>380</MaxValue>
+        <Mean>0.379974722651313</Mean>
+        <StdDev>2.83481634988937</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq3">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="TotalUninjured" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>699</MaxValue>
+        <Mean>6.43273952816562</Mean>
+        <StdDev>31.1778816648812</StdDev>
+      </ColumnStatisticsProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq3">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <KeyColumns>
+          <Column Name="AccidentNumber" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq3">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="AccidentNumber" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>47281</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq3">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="TotalFatalInjuries" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>103</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>0</Value>
+            <Count>26229</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>879</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>6</Value>
+            <Count>119</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>7</Value>
+            <Count>67</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>4910</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>565</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>210</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>2811</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq3">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="TotalSeriousInjuries" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>45</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>0</Value>
+            <Count>27789</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>344</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>4995</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>142</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>48</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>1570</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq3">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="TotalMinorInjuries" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>46</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>0</Value>
+            <Count>27936</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>329</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>5274</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>157</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>65</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>1684</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq3">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="TotalUninjured" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>344</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>0</Value>
+            <Count>14020</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>9</Value>
+            <Count>73</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>2073</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>6</Value>
+            <Count>230</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>7</Value>
+            <Count>146</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>12943</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>10</Value>
+            <Count>55</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>1136</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>429</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>8536</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>8</Value>
+            <Count>91</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq3">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgInjuries" RowCount="47281" />
+        <Column Name="AircraftRegNo" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>0</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="LocationID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Location" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Country" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>45</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Latitude" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>14218</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Longitude" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>14227</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Airport Code" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>18733</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Airport Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>18239</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="EventId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="LocationID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>11234</MinValue>
+        <MaxValue>58514</MaxValue>
+        <Mean>34874</Mean>
+        <StdDev>13648.8490357246</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="EventId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>7100</MinValue>
+        <MaxValue>54380</MaxValue>
+        <Mean>30740</Mean>
+        <StdDev>13648.8490357246</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Location" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>3</MinLength>
+        <MaxLength>19</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>8704</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>604</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>24</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>1943</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>4309</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>8753</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>41</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>4186</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>1135</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>153</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>2065</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>1529</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>494</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>674</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>6660</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>1691</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>4316</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Country" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>2</MinLength>
+        <MaxLength>32</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>689</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>32</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>164</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>1589</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>27</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>808</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>24</Length>
+            <Count>8</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>58</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>30</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>71</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>120</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>5</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>41806</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>729</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>6</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>49</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>14</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>16</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>250</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>5</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>389</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>453</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Latitude" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>10</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>10129</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>17</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>348</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>21639</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>63</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>219</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>537</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>54</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>53</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Longitude" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>11</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>278</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>32</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>412</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>404</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>5801</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>48</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>112</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>4411</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>21551</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Airport Code" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>8</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>22440</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>10</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>5977</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>96</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>25</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Airport Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>2</MinLength>
+        <MaxLength>30</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>23</Length>
+            <Count>1166</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>29</Length>
+            <Count>594</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>759</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>1617</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>128</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>26</Length>
+            <Count>837</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>1335</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>563</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>1181</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>27</Length>
+            <Count>788</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>851</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>24</Length>
+            <Count>1265</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>1406</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>30</Length>
+            <Count>1271</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>966</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>248</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>1412</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>25</Length>
+            <Count>1262</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>1381</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>229</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>1110</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>1770</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>27</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>1387</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>1125</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>1390</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>28</Length>
+            <Count>738</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>1521</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>715</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <KeyColumns>
+          <Column Name="LocationID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="LocationID" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>47281</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Location" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1021</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Middletown</Value>
+            <Count>70</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Baltimore</Value>
+            <Count>920</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Garden Grove</Value>
+            <Count>70</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Newark</Value>
+            <Count>181</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Chapel Hill</Value>
+            <Count>54</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Charlotte</Value>
+            <Count>159</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Kansas City</Value>
+            <Count>233</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Phoenix</Value>
+            <Count>493</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Knoxville</Value>
+            <Count>115</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Plano</Value>
+            <Count>54</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Laughlin</Value>
+            <Count>68</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Longboat Key</Value>
+            <Count>110</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Allentown</Value>
+            <Count>65</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Naples</Value>
+            <Count>84</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Temecula</Value>
+            <Count>55</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Fort Lauderdale</Value>
+            <Count>116</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Glen Burnie</Value>
+            <Count>210</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Vail</Value>
+            <Count>49</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>West Palm Beach</Value>
+            <Count>84</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Buffalo</Value>
+            <Count>56</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Los Angeles</Value>
+            <Count>161</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Portland</Value>
+            <Count>357</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Punta Gorda</Value>
+            <Count>60</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Atlantic City</Value>
+            <Count>215</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Pittsburgh</Value>
+            <Count>164</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Seattle</Value>
+            <Count>544</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Austin</Value>
+            <Count>115</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Gatlinburg</Value>
+            <Count>158</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>West Hollywood</Value>
+            <Count>149</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lahaina</Value>
+            <Count>563</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Minneapolis</Value>
+            <Count>62</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Redding</Value>
+            <Count>56</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Salem</Value>
+            <Count>64</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Durham</Value>
+            <Count>72</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sausalito</Value>
+            <Count>50</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Columbia</Value>
+            <Count>301</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Atlanta</Value>
+            <Count>750</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Grove City</Value>
+            <Count>52</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Oxon Hill</Value>
+            <Count>155</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Albert Lea</Value>
+            <Count>50</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Norfolk</Value>
+            <Count>347</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>San Jose</Value>
+            <Count>76</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>El Segundo</Value>
+            <Count>50</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Virginia Beach</Value>
+            <Count>1284</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Camarillo</Value>
+            <Count>140</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wytheville</Value>
+            <Count>53</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Tallahassee</Value>
+            <Count>169</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Napa</Value>
+            <Count>550</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bar Harbor</Value>
+            <Count>95</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>San Diego</Value>
+            <Count>313</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>New York</Value>
+            <Count>370</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sioux Falls</Value>
+            <Count>71</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Norwalk</Value>
+            <Count>50</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hyattsville</Value>
+            <Count>1010</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Denver</Value>
+            <Count>142</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Baton Rouge</Value>
+            <Count>57</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Philadelphia</Value>
+            <Count>200</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Arlington</Value>
+            <Count>1072</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Scranton</Value>
+            <Count>48</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>San Antonio</Value>
+            <Count>130</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Amarillo</Value>
+            <Count>53</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Houston</Value>
+            <Count>194</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Gloucester</Value>
+            <Count>144</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Springfield</Value>
+            <Count>1022</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Medford</Value>
+            <Count>61</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Honolulu</Value>
+            <Count>290</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Anaheim</Value>
+            <Count>390</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Jackson</Value>
+            <Count>77</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Raton</Value>
+            <Count>64</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Marana</Value>
+            <Count>60</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Woburn</Value>
+            <Count>60</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Suffolk</Value>
+            <Count>230</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>New Orleans</Value>
+            <Count>909</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Santa Barbara</Value>
+            <Count>102</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Harrisburg</Value>
+            <Count>175</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Boston</Value>
+            <Count>1245</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Jacksonville</Value>
+            <Count>100</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Newport News</Value>
+            <Count>53</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Florence</Value>
+            <Count>52</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Louisville</Value>
+            <Count>215</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Richmond</Value>
+            <Count>94</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Kingsland</Value>
+            <Count>48</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Greenville</Value>
+            <Count>156</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hampton</Value>
+            <Count>395</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Williamsburg</Value>
+            <Count>200</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Danville</Value>
+            <Count>61</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Cambridge</Value>
+            <Count>65</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Tulsa</Value>
+            <Count>52</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Kissimmee</Value>
+            <Count>465</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Linthicum Heights</Value>
+            <Count>505</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Albuquerque</Value>
+            <Count>91</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Myrtle Beach</Value>
+            <Count>156</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lanham</Value>
+            <Count>310</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Flagstaff</Value>
+            <Count>113</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Fort Myers</Value>
+            <Count>92</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Miami Beach</Value>
+            <Count>985</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Santa Monica</Value>
+            <Count>212</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Milwaukee</Value>
+            <Count>89</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Saint Louis</Value>
+            <Count>197</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Littleton</Value>
+            <Count>48</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Moses Lake</Value>
+            <Count>48</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Freehold</Value>
+            <Count>72</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Carmel</Value>
+            <Count>88</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Koloa</Value>
+            <Count>143</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Tracy</Value>
+            <Count>60</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Fresno</Value>
+            <Count>70</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bethlehem</Value>
+            <Count>60</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lexington</Value>
+            <Count>69</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Valencia</Value>
+            <Count>65</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Long Beach</Value>
+            <Count>245</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Nashville</Value>
+            <Count>94</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Chicago</Value>
+            <Count>1769</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Charleston</Value>
+            <Count>681</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Orlando</Value>
+            <Count>323</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bowling Green</Value>
+            <Count>170</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hollywood</Value>
+            <Count>238</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Madison</Value>
+            <Count>85</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Fort Wayne</Value>
+            <Count>76</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Indianapolis</Value>
+            <Count>54</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Dayton</Value>
+            <Count>144</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Las Vegas</Value>
+            <Count>2515</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Alexandria</Value>
+            <Count>79</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Morro Bay</Value>
+            <Count>70</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South Lake Tahoe</Value>
+            <Count>165</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Tampa</Value>
+            <Count>250</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sedona</Value>
+            <Count>131</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Omaha</Value>
+            <Count>82</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Prince Frederick</Value>
+            <Count>110</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Phoenixville</Value>
+            <Count>55</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wisconsin Dells</Value>
+            <Count>172</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hanover</Value>
+            <Count>648</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Rockford</Value>
+            <Count>62</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>San Francisco</Value>
+            <Count>600</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Key West</Value>
+            <Count>225</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Silver Spring</Value>
+            <Count>210</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Pismo Beach</Value>
+            <Count>210</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Beverly Hills</Value>
+            <Count>65</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Butte</Value>
+            <Count>51</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Boise</Value>
+            <Count>149</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Augusta</Value>
+            <Count>66</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Columbus</Value>
+            <Count>201</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Santa Rosa</Value>
+            <Count>75</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Walterboro</Value>
+            <Count>50</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Oklahoma City</Value>
+            <Count>236</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lafayette</Value>
+            <Count>90</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Chincoteague Island</Value>
+            <Count>145</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>McMinnville</Value>
+            <Count>72</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Savannah</Value>
+            <Count>59</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Erie</Value>
+            <Count>154</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Country" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>196</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Eswatini</Value>
+            <Count>65</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Guatemala</Value>
+            <Count>58</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>New Zealand</Value>
+            <Count>56</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Italy</Value>
+            <Count>110</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Brazil</Value>
+            <Count>340</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Netherlands</Value>
+            <Count>49</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Indonesia</Value>
+            <Count>105</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Germany</Value>
+            <Count>204</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>United States</Value>
+            <Count>41779</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bahamas</Value>
+            <Count>109</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Australia</Value>
+            <Count>294</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>United Kingdom</Value>
+            <Count>315</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Mexico</Value>
+            <Count>300</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sweden</Value>
+            <Count>54</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Argentina</Value>
+            <Count>95</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>China</Value>
+            <Count>63</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Peru</Value>
+            <Count>87</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>India</Value>
+            <Count>86</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Austria</Value>
+            <Count>55</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Russia</Value>
+            <Count>91</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Canada</Value>
+            <Count>320</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Ireland</Value>
+            <Count>75</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>France</Value>
+            <Count>216</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Dominican Republic</Value>
+            <Count>56</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Japan</Value>
+            <Count>111</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Spain</Value>
+            <Count>209</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Venezuela</Value>
+            <Count>105</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Colombia</Value>
+            <Count>172</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Chile</Value>
+            <Count>55</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South Africa</Value>
+            <Count>125</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Latitude" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>24743</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Longitude" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>26196</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Airport Code" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>7678</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>OSH</Value>
+            <Count>59</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BJC</Value>
+            <Count>58</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NA</Value>
+            <Count>72</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>APA</Value>
+            <Count>79</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>LAL</Value>
+            <Count>52</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VGT</Value>
+            <Count>71</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PRC</Value>
+            <Count>56</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>N/A</Value>
+            <Count>140</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NONE</Value>
+            <Count>700</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>FFZ</Value>
+            <Count>76</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>FXE</Value>
+            <Count>50</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MYF</Value>
+            <Count>48</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DVT</Value>
+            <Count>73</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CHD</Value>
+            <Count>52</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DEN</Value>
+            <Count>63</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ORD</Value>
+            <Count>61</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PVT</Value>
+            <Count>424</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="Airport Name" SqlDbType="NVarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>13552</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>NONE</Value>
+            <Count>134</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PRIVATE AIRSTRIP</Value>
+            <Count>223</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>N/A</Value>
+            <Count>69</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PRIVATE STRIP</Value>
+            <Count>65</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NORTH LAS VEGAS</Value>
+            <Count>68</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CENTENNIAL</Value>
+            <Count>49</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MERRILL FIELD</Value>
+            <Count>65</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PRIVATE</Value>
+            <Count>281</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <KeyColumns>
+          <Column Name="EventId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAccidentLocation" RowCount="47281" />
+        <Column Name="EventId" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>47281</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAircraft" RowCount="47281" />
+        <Column Name="AircraftRegNo" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAircraft" RowCount="47281" />
+        <Column Name="AircraftCategory" SqlDbType="VarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>20220</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAircraft" RowCount="47281" />
+        <Column Name="Make" SqlDbType="VarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>55</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAircraft" RowCount="47281" />
+        <Column Name="Model" SqlDbType="VarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>69</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAircraft" RowCount="47281" />
+        <Column Name="AmateurBuilt" SqlDbType="VarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>101</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAircraft" RowCount="47281" />
+        <Column Name="NumberofEngines" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>5151</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAircraft" RowCount="47281" />
+        <Column Name="Purposeofflight" SqlDbType="VarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>5730</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq1" IsExact="true">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAircraft" RowCount="47281" />
+        <Column Name="AirCarrier" SqlDbType="VarChar" MaxLength="-1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>33485</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq1">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAircraft" RowCount="47281" />
+        <Column Name="AircraftRegNo" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>5001</MinValue>
+        <MaxValue>52281</MaxValue>
+        <Mean>28641</Mean>
+        <StdDev>13648.8490357246</StdDev>
+      </ColumnStatisticsProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq1">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAircraft" RowCount="47281" />
+        <Column Name="NumberofEngines" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>0</MinValue>
+        <MaxValue>8</MaxValue>
+        <Mean>1.14369807737954</Mean>
+        <StdDev>0.428180475744503</StdDev>
+      </ColumnStatisticsProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq1">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAircraft" RowCount="47281" />
+        <KeyColumns>
+          <Column Name="AircraftRegNo" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq1">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAircraft" RowCount="47281" />
+        <Column Name="AircraftRegNo" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>47281</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq1">
+        <DataSourceID>{689D21A0-97FB-492F-AA2F-5A927A3DE840}</DataSourceID>
+        <Table DataSource="DESKTOP-5NJSVCG" Database="AviationAccident_Staging" Schema="dbo" Table="StgAircraft" RowCount="47281" />
+        <Column Name="NumberofEngines" SqlDbType="Int" MaxLength="0" Precision="10" Scale="0" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>6</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>0</Value>
+            <Count>523</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>144</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>35552</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>180</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>5728</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>

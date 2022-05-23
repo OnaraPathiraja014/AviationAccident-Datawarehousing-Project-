@@ -1,0 +1,3186 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/8/2022 4:51:51 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-5NJSVCG"
+  DTS:CreatorName="DESKTOP-5NJSVCG\DELL"
+  DTS:DTSID="{FD3B9E9D-876D-44F3-9292-268FF4439B7B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="102"
+  DTS:VersionGUID="{E6DA74DD-6778-4E27-B93E-A7D059C687F2}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_SourceDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6172C0F6-14A1-4F07-87CE-58FB203AB4E3}"
+      DTS:ObjectName="DESKTOP-5NJSVCG.AviationAccident_SourceDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-5NJSVCG;Initial Catalog=AviationAccident_SourceDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_SourceDB 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{92BA5F7D-7814-4915-AD3D-CD00CDFA0BD6}"
+      DTS:ObjectName="DESKTOP-5NJSVCG.AviationAccident_SourceDB 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-5NJSVCG;Initial Catalog=AviationAccident_SourceDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_Staging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{977C2A92-69E5-4434-86B6-3EE13958EDB7}"
+      DTS:ObjectName="DESKTOP-5NJSVCG.AviationAccident_Staging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-5NJSVCG;Initial Catalog=AviationAccident_Staging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-5NJSVCG.SLIIT_RetailSourceDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E0F6C6CA-AC31-4EF3-B4DC-671FF785B2BC}"
+      DTS:ObjectName="DESKTOP-5NJSVCG.SLIIT_RetailSourceDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-5NJSVCG;Initial Catalog=SLIIT_RetailSourceDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D907150D-56CB-4DC2-A386-CB3D6CF89A69}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\Users\DELL\Desktop\AccidentLocation.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LocationID"
+              DTS:DTSID="{7DA7BA2B-E343-48B2-B1B2-7E82E19ECBDF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Location"
+              DTS:DTSID="{1D689F01-BEC9-4225-8EDD-42AC3E1CCB0A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{47BF9281-3D31-4144-8D8A-D1CBD53F0083}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Latitude"
+              DTS:DTSID="{D4439D2D-9E6E-4AC7-995E-A9C3DA0D4A4D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Longitude"
+              DTS:DTSID="{C7484CF1-2BAF-4911-B182-1C1B0C85464B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Airport Code"
+              DTS:DTSID="{09F43B75-9C48-4FC0-8D9F-DEA01E1EB57C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Airport Name"
+              DTS:DTSID="{DCFCD1D8-7E98-4693-B3E2-D12DE76AD823}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EventId"
+              DTS:DTSID="{8D616316-B20C-447A-ABFE-6284FE47637B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E304E4AE-A715-47EC-AB85-7BBAC6A2C352}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\Users\DELL\Desktop\accm_txn_complete_time.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EventId"
+              DTS:DTSID="{038C5759-5009-4FAE-9E19-3D296AED080B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="134"
+              DTS:TextQualified="True"
+              DTS:ObjectName="accm_txn_complete_time"
+              DTS:DTSID="{33F49795-1E1C-4829-A6A6-B619B7EEB3F6}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{0A807A43-4654-4ABD-B6CC-8E289DBB7797}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\Users\DELL\Desktop\accm_txn_complete_time.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="18"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EventId"
+              DTS:DTSID="{0E84C442-3811-4285-8FDE-E13837245E4B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="133"
+              DTS:TextQualified="True"
+              DTS:ObjectName="accm_txn_complete_time"
+              DTS:DTSID="{49DB1D3D-4EEF-4D4C-808A-5E8ADDBA1BA5}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute Package Task"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{9B0A8FBB-0A1C-429B-A603-839302C57395}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute Package Task"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>Aviation_Accident_Load_DW.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Extract AccidentLocation to Staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D90AECBF-7321-44FD-9A96-514B7C27E469}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract AccidentLocation to Staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Extract AccidentLocation to Staging.EventHandlers[OnPreExecute]"
+          DTS:CreationName="OnPreExecute"
+          DTS:DTSID="{00404FAE-F7D1-4E6D-85E0-C236CD74342E}"
+          DTS:EventID="1161350408"
+          DTS:EventName="OnPreExecute"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{631713D9-CC57-45BC-96CA-B55CB5B09323}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Extract AccidentLocation to Staging.EventHandlers[OnPreExecute]\Truncate AccidentLocation to Staging"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{340B8AA6-6D17-477E-87E9-BA12627887DA}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Truncate AccidentLocation to Staging"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{977C2A92-69E5-4434-86B6-3EE13958EDB7}"
+                  SQLTask:SqlStatementSource="truncate table [AviationAccident_Staging].[dbo].[StgAccidentLocation]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Extract from AccidentLocation Flatfile source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[LocationID]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].ExternalColumns[LocationID]"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[LocationID]"
+                      name="LocationID"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Location]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].ExternalColumns[Location]"
+                      length="50"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Location]"
+                      name="Location"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      length="50"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Latitude]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
+                      length="50"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Latitude]"
+                      name="Latitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Longitude]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
+                      length="50"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Longitude]"
+                      name="Longitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Airport Code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].ExternalColumns[Airport Code]"
+                      length="50"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Airport Code]"
+                      name="Airport Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Airport Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].ExternalColumns[Airport Name]"
+                      length="50"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Airport Name]"
+                      name="Airport Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[EventId]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].ExternalColumns[EventId]"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[EventId]"
+                      name="EventId"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].ExternalColumns[LocationID]"
+                      dataType="numeric"
+                      name="LocationID"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].ExternalColumns[Location]"
+                      dataType="wstr"
+                      length="50"
+                      name="Location" />
+                    <externalMetadataColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
+                      dataType="wstr"
+                      length="50"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
+                      dataType="wstr"
+                      length="50"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].ExternalColumns[Airport Code]"
+                      dataType="wstr"
+                      length="50"
+                      name="Airport Code" />
+                    <externalMetadataColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].ExternalColumns[Airport Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Airport Name" />
+                    <externalMetadataColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].ExternalColumns[EventId]"
+                      dataType="numeric"
+                      name="EventId"
+                      precision="18" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Load to AccidentLocation Staging"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[StgAccidentLocation]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_Staging]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_Staging]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].Columns[LocationID]"
+                      cachedDataType="numeric"
+                      cachedName="LocationID"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].ExternalColumns[LocationID]"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[LocationID]" />
+                    <inputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].Columns[Location]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Location"
+                      externalMetadataColumnId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Location]" />
+                    <inputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Country"
+                      externalMetadataColumnId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].Columns[Latitude]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Latitude"
+                      externalMetadataColumnId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Latitude]" />
+                    <inputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].Columns[Longitude]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Longitude"
+                      externalMetadataColumnId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Longitude]" />
+                    <inputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].Columns[Airport Code]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Airport Code"
+                      externalMetadataColumnId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].ExternalColumns[Airport Code]"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Airport Code]" />
+                    <inputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].Columns[Airport Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Airport Name"
+                      externalMetadataColumnId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].ExternalColumns[Airport Name]"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[Airport Name]" />
+                    <inputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].Columns[EventId]"
+                      cachedDataType="numeric"
+                      cachedName="EventId"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].ExternalColumns[EventId]"
+                      lineageId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output].Columns[EventId]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].ExternalColumns[LocationID]"
+                      dataType="i4"
+                      name="LocationID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].ExternalColumns[Location]"
+                      dataType="wstr"
+                      length="50"
+                      name="Location" />
+                    <externalMetadataColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="50"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      dataType="wstr"
+                      length="50"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
+                      dataType="wstr"
+                      length="50"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].ExternalColumns[Airport Code]"
+                      dataType="wstr"
+                      length="50"
+                      name="Airport Code" />
+                    <externalMetadataColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].ExternalColumns[Airport Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Airport Name" />
+                    <externalMetadataColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input].ExternalColumns[EventId]"
+                      dataType="i4"
+                      name="EventId" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract AccidentLocation to Staging.Paths[Flat File Source Output]"
+              endId="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Extract Aircraft to Staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{181F3948-86F6-4D6A-A1E1-06526DB7A4AA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Aircraft to Staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Extract Aircraft to Staging.EventHandlers[OnPreExecute]"
+          DTS:CreationName="OnPreExecute"
+          DTS:DTSID="{0105134C-B18D-4B4E-B849-F7D3FDD2BDF4}"
+          DTS:EventID="16384"
+          DTS:EventName="OnPreExecute"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{8BD4ABA3-0BF9-4B12-A637-47CCC3BBB8A7}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Extract Aircraft to Staging.EventHandlers[OnPreExecute]\Truncate Aircraft to Staging"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{C00AEC0A-485E-4966-A6E2-F99C9F52F147}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Truncate Aircraft to Staging"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{977C2A92-69E5-4434-86B6-3EE13958EDB7}"
+                  SQLTask:SqlStatementSource="truncate table [AviationAccident_Staging].[dbo].[StgAircraft]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Aircraft to Staging\Extract from Aircraft source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Extract from Aircraft source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Aircraft]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_SourceDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_SourceDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[AircraftRegNo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[AircraftRegNo]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[AircraftRegNo]"
+                      name="AircraftRegNo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[AircraftCategory]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[AircraftCategory]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[AircraftCategory]"
+                      name="AircraftCategory"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[Make]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[Make]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[Make]"
+                      name="Make"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[Model]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[Model]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[Model]"
+                      name="Model"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[AmateurBuilt]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[AmateurBuilt]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[AmateurBuilt]"
+                      name="AmateurBuilt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[NumberofEngines]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[NumberofEngines]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[NumberofEngines]"
+                      name="NumberofEngines"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[Purposeofflight]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[Purposeofflight]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[Purposeofflight]"
+                      name="Purposeofflight"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[AirCarrier]"
+                      codePage="1252"
+                      dataType="text"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[AirCarrier]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[AirCarrier]"
+                      name="AirCarrier"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[LocationID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[LocationID]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[LocationID]"
+                      name="LocationID"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[AircraftRegNo]"
+                      dataType="i4"
+                      name="AircraftRegNo" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[AircraftCategory]"
+                      codePage="1252"
+                      dataType="text"
+                      name="AircraftCategory" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[Make]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Make" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[Model]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Model" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[AmateurBuilt]"
+                      codePage="1252"
+                      dataType="text"
+                      name="AmateurBuilt" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[NumberofEngines]"
+                      dataType="i4"
+                      name="NumberofEngines" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[Purposeofflight]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Purposeofflight" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[AirCarrier]"
+                      codePage="1252"
+                      dataType="text"
+                      name="AirCarrier" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].ExternalColumns[LocationID]"
+                      dataType="i4"
+                      name="LocationID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[AircraftRegNo]"
+                      dataType="i4"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[AircraftRegNo]"
+                      name="AircraftRegNo" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[AircraftCategory]"
+                      codePage="1252"
+                      dataType="text"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[AircraftCategory]"
+                      name="AircraftCategory" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[Make]"
+                      codePage="1252"
+                      dataType="text"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[Make]"
+                      name="Make" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[Model]"
+                      codePage="1252"
+                      dataType="text"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[Model]"
+                      name="Model" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[AmateurBuilt]"
+                      codePage="1252"
+                      dataType="text"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[AmateurBuilt]"
+                      name="AmateurBuilt" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[NumberofEngines]"
+                      dataType="i4"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[NumberofEngines]"
+                      name="NumberofEngines" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[Purposeofflight]"
+                      codePage="1252"
+                      dataType="text"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[Purposeofflight]"
+                      name="Purposeofflight" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[AirCarrier]"
+                      codePage="1252"
+                      dataType="text"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[AirCarrier]"
+                      name="AirCarrier" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[LocationID]"
+                      dataType="i4"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[LocationID]"
+                      name="LocationID" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Aircraft to Staging\Load to Aircraft staging"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Load to Aircraft staging"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[StgAircraft]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_Staging]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_Staging]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].Columns[AircraftRegNo]"
+                      cachedDataType="i4"
+                      cachedName="AircraftRegNo"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[AircraftRegNo]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[AircraftRegNo]" />
+                    <inputColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].Columns[AircraftCategory]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="AircraftCategory"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[AircraftCategory]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[AircraftCategory]" />
+                    <inputColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].Columns[Make]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Make"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[Make]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[Make]" />
+                    <inputColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].Columns[Model]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Model"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[Model]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[Model]" />
+                    <inputColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].Columns[AmateurBuilt]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="AmateurBuilt"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[AmateurBuilt]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[AmateurBuilt]" />
+                    <inputColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].Columns[NumberofEngines]"
+                      cachedDataType="i4"
+                      cachedName="NumberofEngines"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[NumberofEngines]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[NumberofEngines]" />
+                    <inputColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].Columns[Purposeofflight]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="Purposeofflight"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[Purposeofflight]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[Purposeofflight]" />
+                    <inputColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].Columns[AirCarrier]"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
+                      cachedName="AirCarrier"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[AirCarrier]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[AirCarrier]" />
+                    <inputColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].Columns[LocationID]"
+                      cachedDataType="i4"
+                      cachedName="LocationID"
+                      externalMetadataColumnId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[LocationID]"
+                      lineageId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output].Columns[LocationID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[AircraftRegNo]"
+                      dataType="i4"
+                      name="AircraftRegNo" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[AircraftCategory]"
+                      codePage="1252"
+                      dataType="text"
+                      name="AircraftCategory" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[Make]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Make" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[Model]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Model" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[AmateurBuilt]"
+                      codePage="1252"
+                      dataType="text"
+                      name="AmateurBuilt" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[NumberofEngines]"
+                      dataType="i4"
+                      name="NumberofEngines" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[Purposeofflight]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Purposeofflight" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[AirCarrier]"
+                      codePage="1252"
+                      dataType="text"
+                      name="AirCarrier" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input].ExternalColumns[LocationID]"
+                      dataType="i4"
+                      name="LocationID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Aircraft to Staging.Paths[OLE DB Source Output]"
+              endId="Package\Extract Aircraft to Staging\Load to Aircraft staging.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Aircraft to Staging\Extract from Aircraft source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Extract Event to Staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E170A224-F1D6-40E3-8BAC-E793A12A8079}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Event to Staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Extract Event to Staging.EventHandlers[OnError]"
+          DTS:CreationName="OnError"
+          DTS:DTSID="{0F9FADBE-4C53-43FE-89AA-171A929EECD1}"
+          DTS:EventID="140134556"
+          DTS:EventName="OnError"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{EB68A4A5-D476-410E-BD1D-D11D935CB5AB}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables />
+        </DTS:EventHandler>
+        <DTS:EventHandler
+          DTS:refId="Package\Extract Event to Staging.EventHandlers[OnPreExecute]"
+          DTS:CreationName="OnPreExecute"
+          DTS:DTSID="{F8303343-ED54-4BD3-B9D3-2850083EA2E4}"
+          DTS:EventID="3"
+          DTS:EventName="OnPreExecute"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{1F1D9249-7FF8-45C0-88C3-249D55D7BE57}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Extract Event to Staging.EventHandlers[OnPreExecute]\Truncate to Event Staging"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{CB2DD872-DD4A-4C23-8E10-133F366DBC84}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Truncate to Event Staging"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{977C2A92-69E5-4434-86B6-3EE13958EDB7}"
+                  SQLTask:SqlStatementSource="truncate table dbo.StgEvent" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Event to Staging\Extract from Event Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Extract from Event Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Event]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Event to Staging\Extract from Event Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_SourceDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_SourceDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[EventId]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].ExternalColumns[EventId]"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[EventId]"
+                      name="EventId"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[EventDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].ExternalColumns[EventDate]"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[EventDate]"
+                      name="EventDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[BroadPhaseOfFlight]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].ExternalColumns[BroadPhaseOfFlight]"
+                      length="50"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[BroadPhaseOfFlight]"
+                      name="BroadPhaseOfFlight"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[InvestigationType]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].ExternalColumns[InvestigationType]"
+                      length="50"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[InvestigationType]"
+                      name="InvestigationType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[AccidentNumber]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].ExternalColumns[AccidentNumber]"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[AccidentNumber]"
+                      name="AccidentNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[WeatherCondition]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].ExternalColumns[WeatherCondition]"
+                      length="50"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[WeatherCondition]"
+                      name="WeatherCondition"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[AircraftRegNo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].ExternalColumns[AircraftRegNo]"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[AircraftRegNo]"
+                      name="AircraftRegNo"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].ExternalColumns[EventId]"
+                      dataType="i4"
+                      name="EventId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].ExternalColumns[EventDate]"
+                      dataType="dbTimeStamp"
+                      name="EventDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].ExternalColumns[BroadPhaseOfFlight]"
+                      dataType="wstr"
+                      length="50"
+                      name="BroadPhaseOfFlight" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].ExternalColumns[InvestigationType]"
+                      dataType="wstr"
+                      length="50"
+                      name="InvestigationType" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].ExternalColumns[AccidentNumber]"
+                      dataType="i4"
+                      name="AccidentNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].ExternalColumns[WeatherCondition]"
+                      dataType="wstr"
+                      length="50"
+                      name="WeatherCondition" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].ExternalColumns[AircraftRegNo]"
+                      dataType="i4"
+                      name="AircraftRegNo" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[EventId]"
+                      dataType="i4"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[EventId]"
+                      name="EventId" />
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[EventDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[EventDate]"
+                      name="EventDate" />
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[BroadPhaseOfFlight]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[BroadPhaseOfFlight]"
+                      name="BroadPhaseOfFlight" />
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[InvestigationType]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[InvestigationType]"
+                      name="InvestigationType" />
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[AccidentNumber]"
+                      dataType="i4"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[AccidentNumber]"
+                      name="AccidentNumber" />
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[WeatherCondition]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[WeatherCondition]"
+                      name="WeatherCondition" />
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[AircraftRegNo]"
+                      dataType="i4"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[AircraftRegNo]"
+                      name="AircraftRegNo" />
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Event to Staging\Load to Event staging"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Load to Event staging"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[StgEvent]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Event to Staging\Load to Event staging.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_Staging]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_Staging]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].Columns[EventId]"
+                      cachedDataType="i4"
+                      cachedName="EventId"
+                      externalMetadataColumnId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].ExternalColumns[EventId]"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[EventId]" />
+                    <inputColumn
+                      refId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].Columns[EventDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="EventDate"
+                      externalMetadataColumnId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].ExternalColumns[EventDate]"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[EventDate]" />
+                    <inputColumn
+                      refId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].Columns[BroadPhaseOfFlight]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="BroadPhaseOfFlight"
+                      externalMetadataColumnId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].ExternalColumns[BroadPhaseOfFlight]"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[BroadPhaseOfFlight]" />
+                    <inputColumn
+                      refId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].Columns[InvestigationType]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="InvestigationType"
+                      externalMetadataColumnId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].ExternalColumns[InvestigationType]"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[InvestigationType]" />
+                    <inputColumn
+                      refId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].Columns[AccidentNumber]"
+                      cachedDataType="i4"
+                      cachedName="AccidentNumber"
+                      externalMetadataColumnId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].ExternalColumns[AccidentNumber]"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[AccidentNumber]" />
+                    <inputColumn
+                      refId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].Columns[WeatherCondition]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="WeatherCondition"
+                      externalMetadataColumnId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].ExternalColumns[WeatherCondition]"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[WeatherCondition]" />
+                    <inputColumn
+                      refId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].Columns[AircraftRegNo]"
+                      cachedDataType="i4"
+                      cachedName="AircraftRegNo"
+                      externalMetadataColumnId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].ExternalColumns[AircraftRegNo]"
+                      lineageId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output].Columns[AircraftRegNo]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].ExternalColumns[EventId]"
+                      dataType="i4"
+                      name="EventId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].ExternalColumns[EventDate]"
+                      dataType="dbTimeStamp"
+                      name="EventDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].ExternalColumns[BroadPhaseOfFlight]"
+                      dataType="wstr"
+                      length="50"
+                      name="BroadPhaseOfFlight" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].ExternalColumns[InvestigationType]"
+                      dataType="wstr"
+                      length="50"
+                      name="InvestigationType" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].ExternalColumns[AccidentNumber]"
+                      dataType="i4"
+                      name="AccidentNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].ExternalColumns[WeatherCondition]"
+                      dataType="wstr"
+                      length="50"
+                      name="WeatherCondition" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input].ExternalColumns[AircraftRegNo]"
+                      dataType="i4"
+                      name="AircraftRegNo" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Event to Staging\Load to Event staging.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Load to Event staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Event to Staging\Load to Event staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Event to Staging\Load to Event staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Event to Staging\Load to Event staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Event to Staging.Paths[OLE DB Source Output]"
+              endId="Package\Extract Event to Staging\Load to Event staging.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Event to Staging\Extract from Event Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Extract from accumulateDate to staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{96805CB8-6682-4670-B7CE-E22B6AB4CDBF}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract from accumulateDate to staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Extract Accumulate date from Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Output].Columns[EventId]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Output].ExternalColumns[EventId]"
+                      lineageId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Output].Columns[EventId]"
+                      name="EventId"
+                      precision="18"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Output].ExternalColumns[accm_txn_complete_time]"
+                      lineageId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Output].ExternalColumns[EventId]"
+                      dataType="numeric"
+                      name="EventId"
+                      precision="18" />
+                    <externalMetadataColumn
+                      refId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Output].ExternalColumns[accm_txn_complete_time]"
+                      dataType="dbDate"
+                      name="accm_txn_complete_time" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Load from Accumilate data from Staging"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[StgAccumulateDate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_Staging]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_Staging]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging.Inputs[OLE DB Destination Input].Columns[EventId]"
+                      cachedDataType="numeric"
+                      cachedName="EventId"
+                      cachedPrecision="18"
+                      externalMetadataColumnId="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging.Inputs[OLE DB Destination Input].ExternalColumns[EventId]"
+                      lineageId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Output].Columns[EventId]" />
+                    <inputColumn
+                      refId="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging.Inputs[OLE DB Destination Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbDate"
+                      cachedName="accm_txn_complete_time"
+                      externalMetadataColumnId="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging.Inputs[OLE DB Destination Input].ExternalColumns[accm_txn_complete_time]"
+                      lineageId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Output].Columns[accm_txn_complete_time]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging.Inputs[OLE DB Destination Input].ExternalColumns[EventId]"
+                      dataType="i4"
+                      name="EventId" />
+                    <externalMetadataColumn
+                      refId="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging.Inputs[OLE DB Destination Input].ExternalColumns[accm_txn_complete_time]"
+                      dataType="dbDate"
+                      name="accm_txn_complete_time" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract from accumulateDate to staging.Paths[Flat File Source Output]"
+              endId="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Extract Injuries to Staging"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D16A4FF5-07F7-45E4-AE38-721114B4E8A5}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract Injuries to Staging"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Extract Injuries to Staging.EventHandlers[OnPreExecute]"
+          DTS:CreationName="OnPreExecute"
+          DTS:DTSID="{402A893A-4660-4B42-9542-A508D278BE42}"
+          DTS:EventID="1074890460"
+          DTS:EventName="OnPreExecute"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{EB3D225D-348E-425F-9C5A-38CF5E9FCF93}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Extract Injuries to Staging.EventHandlers[OnPreExecute]\Truncate Injuries to Staging"
+              DTS:CreationName="Microsoft.ExecuteSQLTask"
+              DTS:Description="Execute SQL Task"
+              DTS:DTSID="{13871D14-CD16-4B4D-AADD-3C3437FCF105}"
+              DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Truncate Injuries to Staging"
+              DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <SQLTask:SqlTaskData
+                  SQLTask:Connection="{977C2A92-69E5-4434-86B6-3EE13958EDB7}"
+                  SQLTask:SqlStatementSource="truncate table dbo.StgInjuries" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract Injuries to Staging\Extract data from injuries source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Extract data from injuries source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Injuries]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Injuries to Staging\Extract data from injuries source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_SourceDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_SourceDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[AccidentNumber]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[AccidentNumber]"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[AccidentNumber]"
+                      name="AccidentNumber"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[TotalFatalInjuries]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[TotalFatalInjuries]"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[TotalFatalInjuries]"
+                      name="TotalFatalInjuries"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[TotalSeriousInjuries]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[TotalSeriousInjuries]"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[TotalSeriousInjuries]"
+                      name="TotalSeriousInjuries"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[TotalMinorInjuries]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[TotalMinorInjuries]"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[TotalMinorInjuries]"
+                      name="TotalMinorInjuries"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[TotalUninjured]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[TotalUninjured]"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[TotalUninjured]"
+                      name="TotalUninjured"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[InjurySeverity]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[InjurySeverity]"
+                      length="50"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[InjurySeverity]"
+                      name="InjurySeverity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[Aircraftdamage]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[Aircraftdamage]"
+                      length="50"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[Aircraftdamage]"
+                      name="Aircraftdamage"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[AircraftRegNo]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[AircraftRegNo]"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[AircraftRegNo]"
+                      name="AircraftRegNo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[StartDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[StartDate]"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[StartDate]"
+                      name="StartDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[EndDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[EndDate]"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[EndDate]"
+                      name="EndDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[AccidentNumber]"
+                      dataType="i4"
+                      name="AccidentNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[TotalFatalInjuries]"
+                      dataType="i4"
+                      name="TotalFatalInjuries" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[TotalSeriousInjuries]"
+                      dataType="i4"
+                      name="TotalSeriousInjuries" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[TotalMinorInjuries]"
+                      dataType="i4"
+                      name="TotalMinorInjuries" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[TotalUninjured]"
+                      dataType="i4"
+                      name="TotalUninjured" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[InjurySeverity]"
+                      dataType="wstr"
+                      length="50"
+                      name="InjurySeverity" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[Aircraftdamage]"
+                      dataType="wstr"
+                      length="50"
+                      name="Aircraftdamage" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[AircraftRegNo]"
+                      dataType="i4"
+                      name="AircraftRegNo" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[StartDate]"
+                      dataType="dbTimeStamp"
+                      name="StartDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].ExternalColumns[EndDate]"
+                      dataType="dbTimeStamp"
+                      name="EndDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[AccidentNumber]"
+                      dataType="i4"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[AccidentNumber]"
+                      name="AccidentNumber" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[TotalFatalInjuries]"
+                      dataType="i4"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[TotalFatalInjuries]"
+                      name="TotalFatalInjuries" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[TotalSeriousInjuries]"
+                      dataType="i4"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[TotalSeriousInjuries]"
+                      name="TotalSeriousInjuries" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[TotalMinorInjuries]"
+                      dataType="i4"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[TotalMinorInjuries]"
+                      name="TotalMinorInjuries" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[TotalUninjured]"
+                      dataType="i4"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[TotalUninjured]"
+                      name="TotalUninjured" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[InjurySeverity]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[InjurySeverity]"
+                      name="InjurySeverity" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[Aircraftdamage]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[Aircraftdamage]"
+                      name="Aircraftdamage" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[AircraftRegNo]"
+                      dataType="i4"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[AircraftRegNo]"
+                      name="AircraftRegNo" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[StartDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[StartDate]"
+                      name="StartDate" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[EndDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[EndDate]"
+                      name="EndDate" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Loading data from injuries to the Staging"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StgInjuries]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_Staging]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_Staging]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].Columns[AccidentNumber]"
+                      cachedDataType="i4"
+                      cachedName="AccidentNumber"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].ExternalColumns[AccidentNumber]"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[AccidentNumber]" />
+                    <inputColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].Columns[TotalFatalInjuries]"
+                      cachedDataType="i4"
+                      cachedName="TotalFatalInjuries"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].ExternalColumns[TotalFatalInjuries]"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[TotalFatalInjuries]" />
+                    <inputColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].Columns[TotalSeriousInjuries]"
+                      cachedDataType="i4"
+                      cachedName="TotalSeriousInjuries"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].ExternalColumns[TotalSeriousInjuries]"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[TotalSeriousInjuries]" />
+                    <inputColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].Columns[TotalMinorInjuries]"
+                      cachedDataType="i4"
+                      cachedName="TotalMinorInjuries"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].ExternalColumns[TotalMinorInjuries]"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[TotalMinorInjuries]" />
+                    <inputColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].Columns[TotalUninjured]"
+                      cachedDataType="i4"
+                      cachedName="TotalUninjured"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].ExternalColumns[TotalUninjured]"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[TotalUninjured]" />
+                    <inputColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].Columns[InjurySeverity]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="InjurySeverity"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].ExternalColumns[InjurySeverity]"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[InjurySeverity]" />
+                    <inputColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].Columns[Aircraftdamage]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Aircraftdamage"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].ExternalColumns[Aircraftdamage]"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[Aircraftdamage]" />
+                    <inputColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].Columns[AircraftRegNo]"
+                      cachedDataType="i4"
+                      cachedName="AircraftRegNo"
+                      externalMetadataColumnId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].ExternalColumns[AircraftRegNo]"
+                      lineageId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output].Columns[AircraftRegNo]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].ExternalColumns[AccidentNumber]"
+                      dataType="i4"
+                      name="AccidentNumber" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].ExternalColumns[TotalFatalInjuries]"
+                      dataType="i4"
+                      name="TotalFatalInjuries" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].ExternalColumns[TotalSeriousInjuries]"
+                      dataType="i4"
+                      name="TotalSeriousInjuries" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].ExternalColumns[TotalMinorInjuries]"
+                      dataType="i4"
+                      name="TotalMinorInjuries" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].ExternalColumns[TotalUninjured]"
+                      dataType="i4"
+                      name="TotalUninjured" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].ExternalColumns[InjurySeverity]"
+                      dataType="wstr"
+                      length="50"
+                      name="InjurySeverity" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].ExternalColumns[Aircraftdamage]"
+                      dataType="wstr"
+                      length="50"
+                      name="Aircraftdamage" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input].ExternalColumns[AircraftRegNo]"
+                      dataType="i4"
+                      name="AircraftRegNo" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract Injuries to Staging.Paths[OLE DB Source Output]"
+              endId="Package\Extract Injuries to Staging\Loading data from injuries to the Staging.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract Injuries to Staging\Extract data from injuries source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{8F5CB103-29BC-431E-A172-17C06DC6AFCF}"
+      DTS:From="Package\Extract AccidentLocation to Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Extract Event to Staging" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{D25A868A-D270-44F2-90B8-D317E602A304}"
+      DTS:From="Package\Extract Injuries to Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Extract Aircraft to Staging" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{13643F67-3E89-402A-BACA-435EA484E6E4}"
+      DTS:From="Package\Extract Aircraft to Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Extract AccidentLocation to Staging" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{424F5742-7ED8-42B6-85A1-ABD98E58579F}"
+      DTS:From="Package\Extract Event to Staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Extract from accumulateDate to staging" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{74EE7B07-8DE0-42C4-853D-266ADBC11C87}"
+      DTS:From="Package\Extract from accumulateDate to staging"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Execute Package Task" />
+  </DTS:PrecedenceConstraints>
+  <DTS:EventHandlers>
+    <DTS:EventHandler
+      DTS:refId="Package.EventHandlers[OnError]"
+      DTS:CreationName="OnError"
+      DTS:DTSID="{B8E223C1-FC80-46DB-B217-356D168CB734}"
+      DTS:EventID="16384"
+      DTS:EventName="OnError"
+      DTS:LocaleID="-1">
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:Description="The propagate property of the event"
+          DTS:DTSID="{60106C89-BFF0-48B1-ABEB-E055944D5F0D}"
+          DTS:IncludeInDebugDump="6789"
+          DTS:Namespace="System"
+          DTS:ObjectName="Propagate">
+          <DTS:VariableValue
+            DTS:DataType="11">-1</DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables />
+    </DTS:EventHandler>
+  </DTS:EventHandlers>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="182.4,41.6"
+          Id="Package\Execute Package Task"
+          TopLeft="478.014292793858,128.911766829375" />
+        <NodeLayout
+          Size="244.8,41.6"
+          Id="Package\Extract AccidentLocation to Staging"
+          TopLeft="143.961041412681,303.768988071609" />
+        <NodeLayout
+          Size="200,41.6"
+          Id="Package\Extract Aircraft to Staging"
+          TopLeft="173.162340517611,222.06042991343" />
+        <NodeLayout
+          Size="192,41.6"
+          Id="Package\Extract Event to Staging"
+          TopLeft="472.058449503885,304.33315912538" />
+        <NodeLayout
+          Size="201.6,41.6"
+          Id="Package\Extract Injuries to Staging"
+          TopLeft="177.642860074433,132.135295747803" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="388.761041412681,324.851073598494">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="83.2974080912043,0"
+              Start="0,0"
+              End="75.7974080912043,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="75.7974080912043,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="275.802600296022,173.735295747803">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.3251341656269"
+              Start="0,0"
+              End="0,40.8251341656269">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.8251341656269" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="269.761690965146,263.66042991343">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.1085581581784"
+              Start="0,0"
+              End="0,32.6085581581784">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.6085581581784" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="265.6,41.6"
+          Id="Package\Extract from accumulateDate to staging"
+          TopLeft="495.24026756959,225.606954435839" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="568.058449503885,304.33315912538">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="59.9818180657051,-37.126204689541"
+              Start="0,0"
+              End="59.9818180657051,-29.626204689541">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-14.5631023447705" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-14.5631023447705"
+                    Point2="0,-18.5631023447705"
+                    Point3="4,-18.5631023447705" />
+                  <mssgle:LineSegment
+                    End="55.9818180657051,-18.5631023447705" />
+                  <mssgle:CubicBezierSegment
+                    Point1="55.9818180657051,-18.5631023447705"
+                    Point2="59.9818180657051,-18.5631023447705"
+                    Point3="59.9818180657051,-22.5631023447705" />
+                  <mssgle:LineSegment
+                    End="59.9818180657051,-29.626204689541" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="628.04026756959,225.606954435839">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-58.8259747757321,-55.0951876064641"
+              Start="0,0"
+              End="-58.8259747757321,-47.5951876064641">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-23.547593803232" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-23.547593803232"
+                    Point2="0,-27.547593803232"
+                    Point3="-4,-27.547593803232" />
+                  <mssgle:LineSegment
+                    End="-54.8259747757321,-27.547593803232" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-54.8259747757321,-27.547593803232"
+                    Point2="-58.8259747757321,-27.547593803232"
+                    Point3="-58.8259747757321,-31.547593803232" />
+                  <mssgle:LineSegment
+                    End="-58.8259747757321,-47.5951876064641" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Extract AccidentLocation to Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="287.2,41.6"
+          Id="Package\Extract AccidentLocation to Staging\Extract from AccidentLocation Flatfile source"
+          TopLeft="97.7727272727273,66.5909090909091" />
+        <NodeLayout
+          Size="234.4,41.6"
+          Id="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging"
+          TopLeft="501.5,68.5909090909091" />
+        <EdgeLayout
+          Id="Package\Extract AccidentLocation to Staging.Paths[Flat File Source Output]"
+          TopLeft="384.972727272727,88.3909090909091">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="116.527272727273,0"
+              Start="0,0"
+              End="109.027272727273,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="109.027272727273,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract AccidentLocation to Staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="253.6,41.6"
+          Id="Package\Extract AccidentLocation to Staging.EventHandlers[OnPreExecute]\Truncate AccidentLocation to Staging"
+          TopLeft="336.5,177.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract AccidentLocation to Staging\Load to AccidentLocation Staging">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Extract Aircraft to Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="208,41.6"
+          Id="Package\Extract Aircraft to Staging\Extract from Aircraft source"
+          TopLeft="41.7857142857142,44.2142857142857" />
+        <NodeLayout
+          Size="188.8,41.6"
+          Id="Package\Extract Aircraft to Staging\Load to Aircraft staging"
+          TopLeft="388.5,46.7857142857143" />
+        <EdgeLayout
+          Id="Package\Extract Aircraft to Staging.Paths[OLE DB Source Output]"
+          TopLeft="249.785714285714,66.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="138.714285714286,0"
+              Start="0,0"
+              End="131.214285714286,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="131.214285714286,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract Aircraft to Staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="208.8,41.6"
+          Id="Package\Extract Aircraft to Staging.EventHandlers[OnPreExecute]\Truncate Aircraft to Staging"
+          TopLeft="416.5,175.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Aircraft to Staging\Load to Aircraft staging">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Aircraft to Staging\Extract from Aircraft source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Extract Event to Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="201.6,41.6"
+          Id="Package\Extract Event to Staging\Extract from Event Source"
+          TopLeft="62.6428581159942,62.8529419808239" />
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\Extract Event to Staging\Load to Event staging"
+          TopLeft="348.357148185068,60.7352944715625" />
+        <EdgeLayout
+          Id="Package\Extract Event to Staging.Paths[OLE DB Source Output]"
+          TopLeft="264.242858115994,82.5941182261932">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="84.1142900690738,0"
+              Start="0,0"
+              End="76.6142900690738,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="76.6142900690738,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract Event to Staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="200.8,41.6"
+          Id="Package\Extract Event to Staging.EventHandlers[OnPreExecute]\Truncate to Event Staging"
+          TopLeft="490.5,156.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Event to Staging\Load to Event staging">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Event to Staging\Extract from Event Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Extract Injuries to Staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="272,41.6"
+          Id="Package\Extract Injuries to Staging\Loading data from injuries to the Staging"
+          TopLeft="341.3,25.9" />
+        <NodeLayout
+          Size="232,41.6"
+          Id="Package\Extract Injuries to Staging\Extract data from injuries source"
+          TopLeft="22.5,25.5" />
+        <EdgeLayout
+          Id="Package\Extract Injuries to Staging.Paths[OLE DB Source Output]"
+          TopLeft="254.5,46.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="86.8,0"
+              Start="0,0"
+              End="79.3,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="79.3,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract Injuries to Staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="210.4,41.6"
+          Id="Package\Extract Injuries to Staging.EventHandlers[OnPreExecute]\Truncate Injuries to Staging"
+          TopLeft="199.5,133.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Injuries to Staging\Loading data from injuries to the Staging">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Injuries to Staging\Extract data from injuries source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Extract from accumulateDate to staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="253.6,41.6"
+          Id="Package\Extract from accumulateDate to staging\Extract Accumulate date from Source"
+          TopLeft="280.5,131.5" />
+        <NodeLayout
+          Size="268.8,41.6"
+          Id="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging"
+          TopLeft="679.5,124.5" />
+        <EdgeLayout
+          Id="Package\Extract from accumulateDate to staging.Paths[Flat File Source Output]"
+          TopLeft="534.1,148.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="145.4,0"
+              Start="0,0"
+              End="137.9,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="137.9,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract from accumulateDate to staging\Load from Accumilate data from Staging">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

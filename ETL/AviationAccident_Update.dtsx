@@ -1,0 +1,927 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/16/2022 12:56:04 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-5NJSVCG"
+  DTS:CreatorName="DESKTOP-5NJSVCG\DELL"
+  DTS:DTSID="{C9F50CC4-6137-4016-B16B-291660E66316}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.180"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{448682FD-9907-41E7-B964-D1CD7EF37DBC}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_DW]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C5C436A3-F4B7-4959-B7B7-AB6948CDC3A0}"
+      DTS:ObjectName="DESKTOP-5NJSVCG.AviationAccident_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-5NJSVCG;Initial Catalog=AviationAccident_DW;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_Staging]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{755646C1-A62E-4968-B820-35E4DBB2D671}"
+      DTS:ObjectName="DESKTOP-5NJSVCG.AviationAccident_Staging">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-5NJSVCG;Initial Catalog=AviationAccident_Staging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Extract and load from accm_txn_complete_time"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{689F478F-8773-42B7-86BD-19943594D12F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract and load from accm_txn_complete_time"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Transform and load accm_txn_complete_time"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[StgAccumulateDate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_Staging]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_Staging]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Output].Columns[EventID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Output].ExternalColumns[EventID]"
+                      lineageId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Output].Columns[EventID]"
+                      name="EventID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Output].Columns[accm_txn_complete_time]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_complete_time]"
+                      lineageId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Output].ExternalColumns[EventID]"
+                      dataType="i4"
+                      name="EventID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_complete_time]"
+                      dataType="dbDate"
+                      name="accm_txn_complete_time" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Error Output].Columns[EventID]"
+                      dataType="i4"
+                      lineageId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Error Output].Columns[EventID]"
+                      name="EventID" />
+                    <outputColumn
+                      refId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Error Output].Columns[accm_txn_complete_time]"
+                      dataType="dbDate"
+                      lineageId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Error Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time" />
+                    <outputColumn
+                      refId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Update FactEvent accm_txn_complete_time"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">update [dbo].[FactEvent]
+ set [accm_txn_complete_time] = ?
+where [EventID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time.Inputs[OLE DB Command Input].Columns[accm_txn_complete_time]"
+                      cachedDataType="dbDate"
+                      cachedName="accm_txn_complete_time"
+                      externalMetadataColumnId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Output].Columns[accm_txn_complete_time]" />
+                    <inputColumn
+                      refId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time.Inputs[OLE DB Command Input].Columns[EventID]"
+                      cachedDataType="i4"
+                      cachedName="EventID"
+                      externalMetadataColumnId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Output].Columns[EventID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="dbTimeStamp"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract and load from accm_txn_complete_time.Paths[OLE DB Source Output]"
+              endId="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time.Inputs[OLE DB Command Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Extract and load from txn_process_time_hours"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3A886C90-2E7A-4392-A88D-38D968D6356A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Extract and load from txn_process_time_hours"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Trnasform and load txn_process_time_hours"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactEvent]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[EventID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[EventID]"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[EventID]"
+                      name="EventID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[EventDateKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[EventDateKey]"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[EventDateKey]"
+                      name="EventDateKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[BoardPhaseOfFlight]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[BoardPhaseOfFlight]"
+                      length="50"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[BoardPhaseOfFlight]"
+                      name="BoardPhaseOfFlight"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[InvestigationType]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[InvestigationType]"
+                      length="50"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[InvestigationType]"
+                      name="InvestigationType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[WeatherCondition]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[WeatherCondition]"
+                      length="50"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[WeatherCondition]"
+                      name="WeatherCondition"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[AccidentNumberKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[AccidentNumberKey]"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[AccidentNumberKey]"
+                      name="AccidentNumberKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[AircraftRegNoKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[AircraftRegNoKey]"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[AircraftRegNoKey]"
+                      name="AircraftRegNoKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[InsertDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[InsertDate]"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[InsertDate]"
+                      name="InsertDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_create_time]"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[accm_txn_create_time]"
+                      name="accm_txn_create_time"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_complete_time]"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[txn_process_time_hours]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[txn_process_time_hours]"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[txn_process_time_hours]"
+                      name="txn_process_time_hours"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[EventID]"
+                      dataType="i4"
+                      name="EventID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[EventDateKey]"
+                      dataType="i4"
+                      name="EventDateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[BoardPhaseOfFlight]"
+                      dataType="wstr"
+                      length="50"
+                      name="BoardPhaseOfFlight" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[InvestigationType]"
+                      dataType="wstr"
+                      length="50"
+                      name="InvestigationType" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[WeatherCondition]"
+                      dataType="wstr"
+                      length="50"
+                      name="WeatherCondition" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[AccidentNumberKey]"
+                      dataType="i4"
+                      name="AccidentNumberKey" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[AircraftRegNoKey]"
+                      dataType="i4"
+                      name="AircraftRegNoKey" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[InsertDate]"
+                      dataType="dbTimeStamp"
+                      name="InsertDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      name="accm_txn_create_time" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      name="accm_txn_complete_time" />
+                    <externalMetadataColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].ExternalColumns[txn_process_time_hours]"
+                      dataType="i4"
+                      name="txn_process_time_hours" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[EventID]"
+                      dataType="i4"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[EventID]"
+                      name="EventID" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[EventDateKey]"
+                      dataType="i4"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[EventDateKey]"
+                      name="EventDateKey" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[BoardPhaseOfFlight]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[BoardPhaseOfFlight]"
+                      name="BoardPhaseOfFlight" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[InvestigationType]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[InvestigationType]"
+                      name="InvestigationType" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[WeatherCondition]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[WeatherCondition]"
+                      name="WeatherCondition" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[AccidentNumberKey]"
+                      dataType="i4"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[AccidentNumberKey]"
+                      name="AccidentNumberKey" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[AircraftRegNoKey]"
+                      dataType="i4"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[AircraftRegNoKey]"
+                      name="AircraftRegNoKey" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[InsertDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[InsertDate]"
+                      name="InsertDate" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      name="ModifiedDate" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[accm_txn_create_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[accm_txn_create_time]"
+                      name="accm_txn_create_time" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[accm_txn_complete_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[accm_txn_complete_time]"
+                      name="accm_txn_complete_time" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[txn_process_time_hours]"
+                      dataType="i4"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[txn_process_time_hours]"
+                      name="txn_process_time_hours" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Extract and load from txn_process_time_hours\Update txn_process_time_hours"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Update txn_process_time_hours"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[FactEvent]
+ SET [txn_process_time_hours] = DATEDIFF (Hh, accm_txn_create_time, accm_txn_complete_time)
+WHERE [EventID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Extract and load from txn_process_time_hours\Update txn_process_time_hours.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_DW]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-5NJSVCG.AviationAccident_DW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Extract and load from txn_process_time_hours\Update txn_process_time_hours.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Update txn_process_time_hours.Inputs[OLE DB Command Input].Columns[EventID]"
+                      cachedDataType="i4"
+                      cachedName="EventID"
+                      externalMetadataColumnId="Package\Extract and load from txn_process_time_hours\Update txn_process_time_hours.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output].Columns[EventID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Update txn_process_time_hours.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Extract and load from txn_process_time_hours\Update txn_process_time_hours.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Extract and load from txn_process_time_hours\Update txn_process_time_hours.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Extract and load from txn_process_time_hours\Update txn_process_time_hours.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Extract and load from txn_process_time_hours\Update txn_process_time_hours.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Update txn_process_time_hours.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Update txn_process_time_hours.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Extract and load from txn_process_time_hours\Update txn_process_time_hours.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Extract and load from txn_process_time_hours\Update txn_process_time_hours.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Extract and load from txn_process_time_hours.Paths[OLE DB Source Output]"
+              endId="Package\Extract and load from txn_process_time_hours\Update txn_process_time_hours.Inputs[OLE DB Command Input]"
+              name="OLE DB Source Output"
+              startId="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{1D08E93F-FF9C-4BEB-870B-B7951866A2E9}"
+      DTS:From="Package\Extract and load from accm_txn_complete_time"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Extract and load from txn_process_time_hours" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="304,41.6"
+          Id="Package\Extract and load from accm_txn_complete_time"
+          TopLeft="160.000002724784,119.294119320114" />
+        <NodeLayout
+          Size="298.4,41.6"
+          Id="Package\Extract and load from txn_process_time_hours"
+          TopLeft="165.500002724784,221.911767740976" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="313.350002724784,160.894119320114">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.0176484208619"
+              Start="0,0"
+              End="0,53.5176484208619">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.5176484208619" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Extract and load from accm_txn_complete_time">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="284.8,41.6"
+          Id="Package\Extract and load from accm_txn_complete_time\Update FactEvent accm_txn_complete_time"
+          TopLeft="164.285717083483,150.647060936298" />
+        <NodeLayout
+          Size="293.6,41.6"
+          Id="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time"
+          TopLeft="51.2142864927954,41.4411769746497" />
+        <EdgeLayout
+          Id="Package\Extract and load from accm_txn_complete_time.Paths[OLE DB Source Output]"
+          TopLeft="198.014286492795,83.0411769746497">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="108.671430590688,67.6058839616479"
+              Start="0,0"
+              End="108.671430590688,60.1058839616479">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.8029419808239" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.8029419808239"
+                    Point2="0,33.8029419808239"
+                    Point3="4,33.8029419808239" />
+                  <mssgle:LineSegment
+                    End="104.671430590688,33.8029419808239" />
+                  <mssgle:CubicBezierSegment
+                    Point1="104.671430590688,33.8029419808239"
+                    Point2="108.671430590688,33.8029419808239"
+                    Point3="108.671430590688,37.8029419808239" />
+                  <mssgle:LineSegment
+                    End="108.671430590688,60.1058839616479" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract and load from accm_txn_complete_time\Transform and load accm_txn_complete_time">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Extract and load from txn_process_time_hours">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="230.4,41.6"
+          Id="Package\Extract and load from txn_process_time_hours\Update txn_process_time_hours"
+          TopLeft="200.5,218.5" />
+        <NodeLayout
+          Size="288.8,41.6"
+          Id="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours"
+          TopLeft="240.5,78.5" />
+        <EdgeLayout
+          Id="Package\Extract and load from txn_process_time_hours.Paths[OLE DB Source Output]"
+          TopLeft="384.9,120.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-69.2,98.4"
+              Start="0,0"
+              End="-69.2,90.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.2"
+                    Point2="0,49.2"
+                    Point3="-4,49.2" />
+                  <mssgle:LineSegment
+                    End="-65.2,49.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-65.2,49.2"
+                    Point2="-69.2,49.2"
+                    Point3="-69.2,53.2" />
+                  <mssgle:LineSegment
+                    End="-69.2,90.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract and load from txn_process_time_hours\Trnasform and load txn_process_time_hours">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
